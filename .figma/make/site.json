@@ -1,0 +1,10 @@
+{
+  "description": "Creates a customizable website platform with a WordPress-style design, enabling users to build and manage professional sites easily.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

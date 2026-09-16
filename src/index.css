@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
+  --color-wp-dark: #1d2327;
+  --color-wp-darker: #161c22;
+  --color-wp-mid: #2c3338;
+  --color-wp-blue: #2271b1;
+  --color-wp-blue-hover: #135e96;
+  --color-wp-blue-light: #e8f0fa;
+  --color-wp-green: #00a32a;
+  --color-wp-red: #d63638;
+  --color-wp-orange: #dba617;
+  --color-wp-text: #3c434a;
+  --color-wp-label: #646970;
+  --color-wp-border: #c3c4c7;
+  --color-wp-bg: #f0f0f1;
+  --color-wp-white: #ffffff;
+  --color-wp-sidebar-text: #a7aaad;
+  --color-wp-sidebar-hover: #2c3338;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f0f0f1;
+  color: #3c434a;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3c4c7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c8f94;
+}
+
+.wp-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #a7aaad;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wp-sidebar-link:hover {
+  background-color: #2c3338;
+  color: #ffffff;
+}
+.wp-sidebar-link.active {
+  background-color: #2271b1;
+  color: #ffffff;
+}
+
+.wp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.wp-btn-primary {
+  background: #2271b1;
+  color: #ffffff;
+  border-color: #2271b1;
+}
+.wp-btn-primary:hover {
+  background: #135e96;
+  border-color: #135e96;
+}
+.wp-btn-secondary {
+  background: #ffffff;
+  color: #2271b1;
+  border-color: #2271b1;
+}
+.wp-btn-secondary:hover {
+  background: #e8f0fa;
+}
+.wp-btn-danger {
+  background: #fff;
+  color: #d63638;
+  border-color: #d63638;
+}
+.wp-btn-danger:hover {
+  background: #d63638;
+  color: #fff;
+}
+.wp-btn-ghost {
+  background: transparent;
+  color: #646970;
+  border-color: #c3c4c7;
+}
+.wp-btn-ghost:hover {
+  background: #f0f0f1;
+  color: #3c434a;
+}
+.wp-btn-sm {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.wp-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #8c8f94;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #3c434a;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.wp-input:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+}
+.wp-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23646970' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.wp-card {
+  background: #ffffff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.wp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.wp-table th {
+  background: #f6f7f7;
+  border-bottom: 1px solid #c3c4c7;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #3c434a;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.wp-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f0f1;
+  color: #3c434a;
+  vertical-align: middle;
+}
+.wp-table tr:hover td {
+  background: #f6f7f7;
+}
+.wp-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background: #d63638;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-in { animation: slideIn 0.2s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in { animation: fadeIn 0.2s ease; }
